@@ -90,8 +90,15 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  var response = confirm('testing');
-  console.log(response);
+var inputLower = confirm('Do you want to include Lowercase in your password ?');
+var inputUpper = confirm('Do you want to include Uppercase in your password ?');
+var inputNum = confirm('Do you want to include Numbers in your password ?');
+var inputSpec = confirm('Do you want to include Special Characters in your password ?');
+var passOption = [];
+if (inputLower = true) {
+  passOption = [...lowerCasedCharacters];
+}
+
 
 }
 
@@ -118,3 +125,15 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+// Generate a password when the button is clicked
+// Present a series of prompts for password criteria
+// Length of password at least 10 characters but no more than 64.
+// Character types
+// Lowercase
+// Uppercase
+// Numeric
+// Special characters ($@%&*, etc)
+// Code should validate for each input and at least one character type should be selected
+// Once prompts are answered then the password should be generated and displayed in an alert or written to the page
